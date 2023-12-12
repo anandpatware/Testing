@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="./Content/style.css" />
+       <link rel="stylesheet" href="./Content/Login.css" />
+       <link rel="stylesheet" href="./Content/Registration.css" />
+</head>
+<body>
+
+    <div >
+
+         <div class="navbarr">
+            <img src="4.png">
+            <div id="nav-heading" style="text-transform:uppercase; font-weight:800;font-size:2vw;white-space:nowrap">
+                phonebook web application
+            </div>
+            <div></div>
+
+        </div>
+        <asp:ContentPlaceHolder id="Navbar" runat="server">
+         
+        </asp:ContentPlaceHolder>
+    </div>
+    
+ <script src="Script/Login.js"></script>
+     <script src="Script/Register.js"></script>
+ 
+</body>
+      
+</html>

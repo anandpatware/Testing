@@ -1,0 +1,285 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1000; /* Make sure it's above other elements */
+}
+
+.navbarr {
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    max-height: 100px;
+    background-color: rgb(149,182,214);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 40px;
+    z-index: 999;
+}
+
+img {
+    height: 100px;
+    width: 130px;
+    padding-left: 30px;
+}
+
+.comp {
+    font-size: 28px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#form, #editform {
+    border: 2px solid white;
+    background-color: rgb(219,214,236);
+    margin: 4px;
+    border-radius: 1rem;
+    height: 500px;
+    padding: 20px;
+}
+
+
+
+#addformParent, #editformParent {
+    width: 450px;
+    height: 560px;
+    background-color: rgb(219,214,236);
+    border-radius: 1rem;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#addform-fieldsparent, #editform-fieldsparent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#addform-addbtn {
+    color: white;
+    background-color: rgb(123,102,196);
+    border: 1px solid white;
+    font-size: 18px;
+    box-shadow: 0 5px 8px gray;
+    width: 155px;
+    font-weight: 600;
+}
+
+    #addform-addbtn:hover {
+        background-color: rgb(199,194,226);
+    }
+
+#addform-cancelbtn {
+    border: none;
+    border-radius: 5px;
+    color: gray;
+    box-shadow: 0 5px 8px gray;
+    font-size: 18px;
+    width: 155px;
+    background-color: whitesmoke;
+    font-weight: 600
+}
+
+
+.entry {
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-validation-parent {
+    height: 52px;
+}
+
+.btn {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 376px;
+}
+
+button {
+    width: 30%;
+    border-radius: .5rem;
+    box-shadow: 10px 0 5px -2px gray;
+    padding: .5rem;
+}
+
+#customers {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-collapse: collapse;
+    margin: 0px;
+}
+
+.parentTable {
+    /* overflow: hidden;
+    overflow-y: scroll;*/
+
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+td {
+    padding-top: 62px;
+    font-size: 1.5vw;
+    width: 20%;
+}
+
+th {
+    top: 0;
+    z-index: -1;
+    position: sticky;
+    background-color: white;
+    font-size: 1.5vw;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-align: left;
+    box-shadow: inset 0px 2px black,inset 0px -2px black;
+    width: 20%;
+}
+
+
+#editform-addbtn {
+    color: white;
+    background-color: forestgreen;
+    border: 1px solid white;
+    font-size: 18px;
+    box-shadow: 0 5px 8px gray;
+    width: 155px;
+    font-weight: 600
+}
+
+#editform-cancelbtn {
+    border: none;
+    border-radius: 5px;
+    color: gray;
+    box-shadow: 0 5px 8px gray;
+    font-size: 18px;
+    width: 155px;
+    background-color: whitesmoke;
+    font-weight: 600
+}
+
+.editButton {
+    background-color: rgb(167,249,159);
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px white;
+    width: 4.5vw;
+    font-size: 1.5vw;
+}
+
+    .editButton:hover {
+        background-color: rgb(22,124,14);
+        color: white;
+    }
+
+.deleteButton {
+    background-color: rgb(255,191,163);
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px white;
+    width: 5.5vw;
+    font-size: 1.5vw;
+}
+
+    .deleteButton:hover {
+        background-color: red;
+        color: white;
+    }
+
+#deletebox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgb(244,231,231);
+    border: none;
+    width: 600px;
+    height: 235px;
+    border-radius: 20px;
+    box-shadow: 0 7px 12px gray;
+}
+
+#deletebox-topheading, #deletebox-description {
+    text-align: center;
+    margin-bottom: 1rem;
+    white-space: nowrap
+}
+
+#deletebox-btnparent {
+    padding: 1rem;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    width: 470px;
+    margin-left: 46px;
+    /*   text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;*/
+}
+
+#deletebox-cancelbtn {
+    border: none;
+    box-shadow: 0 4px 8px gray;
+    height: 46px;
+    width: 240px;
+}
+
+#deletebox-deletebtn {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 8px gray;
+    background-color: rgb(251,71,71);
+    height: 46px;
+    width: 240px;
+}
+
+
+input {
+    width: 200px;
+    height: 18px;
+    border: none;
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+label {
+    font-size: 18px;
+}
+
+.firstname-error {
+    padding: 0;
+    margin: 0;
+}
